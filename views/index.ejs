@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <% include template/head %>
+  <body>
+    <% include template/nav %>
+    <style>
+      pre {
+        background: #f2f2f2;
+        padding: 5px;
+        border-radius: 4px;
+        display: none;
+      }
+    </style>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6 mt-3">
+          <div
+            class="alert alert-success"
+            id="successMsg"
+            style="display: none;"
+            role="alert"
+          >
+            <i class="fa fa-handshake-o"></i>
+            Application connection was successful!
+          </div>
+          <pre id="json"></pre>
+          <div class="card" id="connectPanel">
+            <div class="card-header">
+              <h6 class="card-title mb-2">
+                <i class="fa fa-code-fork"></i>
+                Connect your shopify store
+              </h6>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12">
+                  Syncr needs to connect to your shopify store in order to
+                  perform actions on your behalf.
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="row">
+                <div class="col"></div>
+                <div class="col-auto">
+                  <button
+                    class="btn btn-primary btn-sm"
+                    onclick="init_shopify_auth('<%= integrationUrl %>')"
+                  >
+                    <i class="fa fa-external-link"></i>
+                    Connect
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+  </body>
+</html>

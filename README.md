@@ -1,0 +1,1 @@
+# Shopify apps boilerplate
