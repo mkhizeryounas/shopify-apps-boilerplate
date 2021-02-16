@@ -1,4 +1,4 @@
-const keys = require('../../config/keys');
+const keys = require('../config/keys');
 const sha256 = require('sha256');
 const Joi = require('joi');
 

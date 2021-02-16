@@ -1,10 +1,8 @@
 const express = require('express');
-const locker = require('../src/modules/locker');
 const keys = require('../config/keys');
 const http = require('request-promise');
-const utils = require('../src/modules/utils');
-const common = require('../src/modules/common');
-const models = require('../config/models');
+const shopifyHelper = require('../utils/shopify.helper');
+const common = require('../utils/common');
 
 const router = express.Router();
 
@@ -14,7 +12,7 @@ router.get('/', async function (req, res, next) {
 
 /* GET users listing. */
 router.get('/connect', function (req, res, next) {
-  let integrationUrl = utils.generateShopifyAccessUrl(
+  let integrationUrl = shopifyHelper.generateShopifyAccessUrl(
     '{{shop_name}}.myshopify.com',
     { source: 'admin_panel' }
   );

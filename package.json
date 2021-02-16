@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "NODE_ENV=production node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon ./bin/www",
+    "script": "node ./test-scripts/index.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -24,6 +25,7 @@
     "request": "^2.88.2",
     "request-promise": "^4.2.5",
     "sha256": "^0.2.0",
+    "shopify-api-node": "^3.6.1",
     "uuid4": "^1.1.4",
     "validator": "^10.11.0"
   }
